@@ -29,7 +29,7 @@ jobs:
          user: suparna3107@gmail.com
          accessKey: NxNK9ORUuJXOv1aCcjGncMC7nrDsfAyjDhHf6jb19UxsDHgGL0
          tunnelName: "testTunnel"
-    - run: mvn clean test -f sample-maven-app/pom.xml
+    - run: mvn compile #mvn clean test -f sample-maven-app/pom.xml
     - name: Export Tunnel Logs for debugging
       uses: actions/upload-artifact@v2
       with:
