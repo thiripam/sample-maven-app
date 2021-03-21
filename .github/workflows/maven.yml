@@ -29,7 +29,9 @@ jobs:
          user: suparna3107@gmail.com
          accessKey: NxNK9ORUuJXOv1aCcjGncMC7nrDsfAyjDhHf6jb19UxsDHgGL0
          tunnelName: "testTunnel"
-    - run: mvn clean test    #mvn clean test -f pom.xml
+    - run: mvn -B package --file pom.xml test
+            #mvn clean test    
+            #mvn clean test -f pom.xml
     - name: Export Tunnel Logs for debugging
       uses: actions/upload-artifact@v2
       with:
