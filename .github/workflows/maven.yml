@@ -39,9 +39,4 @@ jobs:
     #mvn -B package --file pom.xml test
             #mvn clean test    
             #mvn clean test -f pom.xml
-    - name: Export Tunnel Logs for debugging
-      uses: actions/upload-artifact@v2
-      with:
-         name: tunnel_logs
-         path: ${{ steps.tunnel.outputs.logFileName }}
 
