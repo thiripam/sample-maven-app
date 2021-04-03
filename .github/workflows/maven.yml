@@ -22,11 +22,6 @@ jobs:
   test-tunnel:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
     - name: Start Tunnel
       uses: LambdaTest/LambdaTest-tunnel-action@v1
       id: tunnel
@@ -34,7 +29,13 @@ jobs:
          user: suparna3107@gmail.com
          accessKey: NxNK9ORUuJXOv1aCcjGncMC7nrDsfAyjDhHf6jb19UxsDHgGL0
          tunnelName: "testTunnel"
-    - run: mvn clean test
+    - uses: actions/checkout@v2
+    - name: Set up JDK 1.8
+      uses: actions/setup-java@v1
+      with:
+        java-version: 1.8
+    - name: Build with Maven
+      run: mvn clean test
     #mvn -B package --file pom.xml test
             #mvn clean test    
             #mvn clean test -f pom.xml
