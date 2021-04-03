@@ -29,7 +29,8 @@ jobs:
          user: suparna3107@gmail.com
          accessKey: NxNK9ORUuJXOv1aCcjGncMC7nrDsfAyjDhHf6jb19UxsDHgGL0
          tunnelName: "testTunnel"
-    - run: mvn -B package --file pom.xml test
+    - run: mvn clean test
+    #mvn -B package --file pom.xml test
             #mvn clean test    
             #mvn clean test -f pom.xml
     - name: Export Tunnel Logs for debugging
