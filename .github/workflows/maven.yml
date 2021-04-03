@@ -30,7 +30,7 @@ jobs:
 #          accessKey: NxNK9ORUuJXOv1aCcjGncMC7nrDsfAyjDhHf6jb19UxsDHgGL0
 #          tunnelName: "testTunnel-id2"
   
-  test-tunnel:
+  test-in-LT-tunnel:
     runs-on: ubuntu-latest
     steps:
     - name: Start Tunnel
